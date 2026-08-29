@@ -1,0 +1,29 @@
+# ============================================
+# PMS150C 嵌入式项目（PM-IDE / PlatformIO Free-PDK）
+# ============================================
+
+# PM-IDE
+*.pdk
+*.bin
+*.lst
+*.map
+/Output/
+/output/
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# 编译产物
+*.o
+*.obj
+*.hex
+*.lst
+*.map
+*.elf
+*.d
+
+# 系统
+.DS_Store
+Thumbs.db
