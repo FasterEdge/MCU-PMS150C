@@ -1,3 +1,7 @@
+/* FasterEdge 开源项目
+ * GitHub: https://github.com/FasterEdge
+ * Gitee:  https://gitee.com/FasterEdge
+ */
 // main.c — FasterEdge MCU PMS150C 极简版（应广 PM-IDE）
 // PMS150C 资源极小（1KW OTP / 64B RAM / 无 UART / 6 引脚），
 // 只实现「寄存器/GPIO 基础控制」：PA0 输出（LED）、PA1 输入（按键）。
