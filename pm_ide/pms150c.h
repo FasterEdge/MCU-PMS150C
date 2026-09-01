@@ -1,3 +1,8 @@
+// ─────────────────────────────────────────────────────────────
+// FasterEdge 开源项目
+// Github: https://github.com/FasterEdge
+// Gitee:  https://gitee.com/FasterEdge
+// ─────────────────────────────────────────────────────────────
 // pms150c.h — 应广 (Feeling) PMS150C 最小编译目标定义
 // PMS150C: PDK14 内核、1KW OTP 程序、64B RAM、6 引脚（PA0-PA3 可用）、
 //          内部 1MHz~32kHz RC、无 UART —— 只做寄存器/GPIO 级基础控制。

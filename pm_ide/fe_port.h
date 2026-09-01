@@ -1,3 +1,8 @@
+// ─────────────────────────────────────────────────────────────
+// FasterEdge 开源项目
+// Github: https://github.com/FasterEdge
+// Gitee:  https://gitee.com/FasterEdge
+// ─────────────────────────────────────────────────────────────
 // fe_port.h — FasterEdge MCU 平台移植层（PMS150C 极简版）
 // PMS150C 资源极小（1KW OTP / 64B RAM / 无 UART），
 // 本平台只实现「寄存器/GPIO 基础控制」能力子集：
