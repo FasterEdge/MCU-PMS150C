@@ -8,8 +8,9 @@
 // 对应能力子集：GpioAbility（mode/write/read）+ ChipData（info）
 #include "pms150c.h"
 
-static void gpio_set_output(u8 pin) { IOSTA &= (u8)~(1u << pin); }
-static void gpio_set_input(u8 pin)  { IOSTA |= (u8)(1u << pin); }
+// pac 方向寄存器: 1=输出 0=输入(无 IOSTA; 旧实现写 0x01 的 SP/flag 区, 方向从不生效)
+static void gpio_set_output(u8 pin) { PAC |= (u8)(1u << pin); }
+static void gpio_set_input(u8 pin)  { PAC &= (u8)~(1u << pin); }
 static void gpio_write(u8 pin, u8 v){ if (v) PA |= (u8)(1u << pin); else PA &= (u8)~(1u << pin); }
 static u8   gpio_read(u8 pin)       { return (PA >> pin) & 1u; }
 

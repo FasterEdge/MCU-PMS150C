@@ -11,10 +11,9 @@
         ; PA 数据端口、IOSTA 方向寄存器由汇编器宏提供
 
 start:
-        ; PA0 = 输出, PA1 = 输入
-        IOST    IOSTA           ; 选择端口 A 方向寄存器
-        MOV     A, #0b00000010 ; PA1 输入, PA0 输出
-        MOV     IOSTA, A
+        ; PA0 = 输出, PA1 = 输入 (pac 方向寄存器: 1=输出 0=输入)
+        MOV     A, #0b00000001 ; pac.0=1 → PA0 输出, 其余输入
+        MOV     PAC, A
 
 loop:
         ; 读 PA1（按键按下=0 则点亮 PA0）

@@ -20,11 +20,10 @@ typedef uint32_t u32;
 // PMS150C I/O 端口寄存器（PDK14，等效数据内存地址）
 // 实际 PM-IDE 汇编中用 IOST/PA 端口指令；此处给出等效地址供 C 语法检查
 #define SFR(addr) (*(volatile u8 *)(addr))
-#define PA    SFR(0x00)   // 端口 A 数据
-#define IOSTA SFR(0x01)   // 端口 A 方向（1=输入）
-#define PAC   SFR(0x02)   // 端口 A 控制（上拉等）
-#define T16M  SFR(0x03)   // 定时器模式
-#define T16   SFR(0x04)   // 定时器计数
+#define PA    SFR(0x10)   // 端口 A 数据寄存器(pa)
+#define PAC   SFR(0x11)   // 端口 A 方向寄存器(pac): 1=输出 0=输入
+// 注: PMS150C 无 IOSTA; 方向由 pac(0x11) 控制。旧定义 IOSTA SFR(0x01) 指向
+// SP/flag 区, 读写方向从不生效。
 
 // 引脚（SOT23-6: VDD/VSS/PA0/PA1/PA3/PA4? 常见 PA0-PA3）
 #define PIN_PA0 0
